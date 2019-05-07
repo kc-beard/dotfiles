@@ -1,0 +1,7 @@
+export PATH=~/bin:~/dotfiles/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+# NPM Things
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# python things
+export PYENV_ROOT="$HOME/.pyenv"

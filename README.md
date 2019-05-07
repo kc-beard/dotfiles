@@ -4,23 +4,18 @@ My dotfiles setup steps
 
 1. Clone the repo to `~/dotfiles`
 
-1. Run the bootstrap
+2. Install oh-my-zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
-    ```bash
-    ./bootstrap.sh
-    ```
+3. Run the bootstrap
 
-1. Install nvim plugins
+```bash
+./bootstrap.sh
+```
 
-    ```
-    nvim
-    :PlugInstall
-    :UpdateRemotePlugins
-    :q!
-    :q!
-    ```
-
-1. If needed, setup a new ssh key for pushing / pulling my dotfiles repo
+4. If needed, setup a new ssh key for pushing / pulling my dotfiles repo
 
     ```bash
     mkdir .ssh

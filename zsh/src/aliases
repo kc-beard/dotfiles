@@ -14,19 +14,11 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias vi='nvim'
-alias vim='nvim'
-
 # Handy commands
 alias timestamp='date +%s'
 alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 
-# Eject a device on OS X
-alias eject='diskutil unmount'
-
 # Docker
 alias d-c='docker-compose'
 alias dm='docker-machine'
-
-alias cx='convox'
 

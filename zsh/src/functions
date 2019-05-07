@@ -9,8 +9,15 @@ longest() { history | perl -lane '$lsize{$_} = scalar(@F); if($longest<$lsize{$_
 # Animals
 animal() { curl -s http://animals.ivolo.me/?index=$1; }
 
+# Better search
+function search(){ grep -Ir --exclude-dir=node_modules --exclude-dir=jquery-ui --exclude-dir=faces --exclude-dir=vendor --exclude-dir=.git --exclude=\*.jgz  "${*}" .; };
+
 # Git-related
 function gitcleanremote {
   for x in `git branch -r --merged | grep origin | grep -v '>' | grep -v master  | xargs -L1 | awk '{split($0,a,"/"); print a[2]}'` ; do git push origin :$x ; done
 }
 
+# Title 
+function title {
+    printf "$1"
+}

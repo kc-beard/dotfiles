@@ -21,8 +21,4 @@ alias la='ls -aFG'
 alias lla='ls -laFG'
 alias lal='ls -laFG'
 
-
-export CVS_RSH=ssh
-export EDITOR=/usr/bin/vim
-
-
+export EDITOR=/usr/bin/emacs

@@ -1,9 +1,0 @@
-if [ -f ~/dotfiles/bash/src/local ]; then
-    . ~/dotfiles/bash/src/local
-fi
-
-. ~/dotfiles/bash/src/env
-. ~/dotfiles/bash/src/config
-. ~/dotfiles/bash/src/aliases
-. ~/dotfiles/bash/src/functions
-. ~/dotfiles/bash/src/misc

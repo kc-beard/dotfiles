@@ -1,0 +1,27 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/kcbeard/.oh-my-zsh"
+
+if [ -f ~/dotfiles/bash/src/local ]; then
+    . ~/dotfiles/bash/src/local
+fi
+
+. ~/dotfiles/zsh/src/env
+. ~/dotfiles/zsh/src/config
+. ~/dotfiles/zsh/src/aliases
+. ~/dotfiles/zsh/src/functions
+. ~/dotfiles/zsh/src/misc
+
+ZSH_THEME="kc"
+# export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+DISABLE_UPDATE_PROMPT="true"
+export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+plugins=(git)
+source $ZSH/oh-my-zsh.sh

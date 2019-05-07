@@ -9,31 +9,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Set the command prompt.
-case `whoami` in
-root)
-   export PS1='\[\e[0;34m\][\[\e[1;30m\]\D{%y/%m/%d} \t\[\e[0;34m\]] \[\e[1;30m\]\! \[\e[0;33m\]\w\n\[\e[0;31m\]\u@\h\[\e[m\] \[\e[0;31m\]\$ \[\e[m\]\[\e[0;32m\]'
-    ;;
-*)
-    export PS1="\[\e[0;34m\][\[\e[1;30m\]\D{%y/%m/%d} \t\[\e[0;34m\]] \[\e[1;30m\]\! \[\e[0;36m\]\u@\h \[\e[0;33m\]\w\n\[\e[0;37m\]\$ \[\e[0m\]"
-    ;;
-esac
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-    ;;
-*)
-    ;;
-esac
-
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-shopt -s extglob      # Setting extended pattern matching.
-shopt -s checkwinsize # check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
-shopt -s histappend   # append to history, don't overwrite it
-
 
 export HISTTIMEFORMAT='%F %T ' # Set the history time format
 export HISTCONTROL=ignoreboth # don't put duplicate successive lines nor lines starting with a space in the history. See bash(1) for more options
@@ -42,7 +18,7 @@ export HISTFILESIZE=1000000     # save this many commands to the history file
 
 #export HISTIGNORE=" *:&:ls" # Set which commands are appended to the history file.
 
-export EDITOR=/usr/local/bin/nvim
+export EDITOR=/usr/local/bin/emacs
 
 # disable the TTY driver from stopping the ctrl-s keystroke.
 stty stop ''
