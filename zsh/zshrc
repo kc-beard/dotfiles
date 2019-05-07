@@ -23,5 +23,9 @@ export UPDATE_ZSH_DAYS=13
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-plugins=(git)
+plugins=(
+  git
+  copyfile
+  zsh-autosuggestions
+)
 source $ZSH/oh-my-zsh.sh
