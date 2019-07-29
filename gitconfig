@@ -71,3 +71,8 @@
     rollback = reset --hard HEAD~1     # erase last commit and related file edits (destructive!)
     uncommit = reset --soft HEAD^      # erase last commit but keeps related file edits
     unstage = reset HEAD
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

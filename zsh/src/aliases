@@ -10,6 +10,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lal='ls -la'
 
+alias search='grep --color=auto --exclude-dir=node_modules'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -22,3 +23,4 @@ alias uuid='uuidgen | tr "[:upper:]" "[:lower:]"'
 alias d-c='docker-compose'
 alias dm='docker-machine'
 
+alias gls="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
